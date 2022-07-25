@@ -5,7 +5,7 @@ Authors@R:
     person("Ali", "Day", , "aliyuenday@gmail.com", role = c("aut", "cre"))
 Description: This is a toy package developed at rstudio::conf 2022's 
   Building Tidy Tools workshop. It allows you to work with European football 
-  league data supplied by the engsoccerdata package (Curley 2016).
+  ?uss_make_matchesleague data supplied by the engsoccerdata package (Curley 2016).
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
