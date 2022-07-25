@@ -6,6 +6,7 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/ali-day/ussie/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ali-day/ussie/actions/workflows/R-CMD-check.yaml)
+[![test-coverage](https://github.com/ali-day/ussie/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/ali-day/ussie/actions/workflows/test-coverage.yaml)
 <!-- badges: end -->
 
 Ussie works with European soccer data. It is a toy package created
