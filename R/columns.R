@@ -49,10 +49,3 @@ cols_seasons_accumulate <- function() {
   c("matches", "wins", "draws", "losses", "points",
     "goals_for", "goals_against")
 }
-
-# Added from slides
-build_time <- Sys.time() # static -- stuck at the time that load_all was run
-
-run_time <- function() { # dynamic -- changes with each function call
-  Sys.time()
-}

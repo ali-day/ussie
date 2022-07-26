@@ -3,15 +3,12 @@ Title: Work with European Soccer Data
 Version: 0.0.0.9000
 Authors@R: 
     person("Ali", "Day", , "aliyuenday@gmail.com", role = c("aut", "cre"))
-Description: This is a toy package developed at rstudio::conf 2022's 
-  Building Tidy Tools workshop. It allows you to work with European football 
-  ?uss_make_matchesleague data supplied by the engsoccerdata package (Curley 2016).
+Description: This is a toy package developed at rstudio::conf 2022's
+    Building Tidy Tools workshop. It allows you to work with European
+    football ?uss_make_matchesleague data supplied by the engsoccerdata
+    package (Curley 2016).
 License: MIT + file LICENSE
-Encoding: UTF-8
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.1
-URL: https://github.com/ali-day/ussie,
-    https://ali-day.github.io/ussie/
+URL: https://github.com/ali-day/ussie, https://ali-day.github.io/ussie/
 BugReports: https://github.com/ali-day/ussie/issues
 Imports: 
     cli,
@@ -21,8 +18,14 @@ Imports:
     tibble,
     withr
 Suggests: 
+    conflicted,
     knitr,
     rmarkdown,
+    roxygen2,
     testthat (>= 3.0.0)
+VignetteBuilder: 
+    knitr
 Config/testthat/edition: 3
-VignetteBuilder: knitr
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.1
