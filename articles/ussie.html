@@ -88,11 +88,25 @@
 <span><span class="co">#&gt; The following objects are masked from 'package:base':</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;     intersect, setdiff, setequal, union</span></span></code></pre></div>
-<p>The goal of ussie is to help you work with European Football League data. It uses data from the engsoccerdata package.</p>
-<p>We can create a matches tibble using raw data from engsoccerdata:</p>
+<p>The goal of <code>ussie</code> is to help you work with European Football League data. It uses data from the <code>engsoccerdata</code> package.</p>
+<p>We can create a matches tibble using raw data from <code>engsoccerdata</code>:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">matches_italy</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/uss_make_matches.html">uss_make_matches</a></span><span class="op">(</span><span class="fu">engsoccerdata</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/engsoccerdata/man/italy.html" class="external-link">italy</a></span>, <span class="st">"Italy"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">matches_italy</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Rows: 25,404</span></span>
+<span><span class="co">#&gt; Columns: 8</span></span>
+<span><span class="co">#&gt; $ tier          <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,…</span></span>
+<span><span class="co">#&gt; $ season        <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1934, 1934, 1934, 1934, 1934, 1934, 1934, 1934, 1934, 19…</span></span>
+<span><span class="co">#&gt; $ date          <span style="color: #949494; font-style: italic;">&lt;date&gt;</span> 1934-09-30, 1934-09-30, 1934-09-30, 1934-09-30, 1934-09…</span></span>
+<span><span class="co">#&gt; $ home          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Lazio Roma", "Torino FC", "Sampierdarenese", "SSC Napol…</span></span>
+<span><span class="co">#&gt; $ visitor       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "US Livorno", "Unione Triestina", "Bologna FC", "US Ales…</span></span>
+<span><span class="co">#&gt; $ goals_home    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 6, 3, 2, 0, 4, 0, 3, 1, 1, 1, 2, 4, 2, 2, 3, 2, 2, 2, 0,…</span></span>
+<span><span class="co">#&gt; $ goals_visitor <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 1, 1, 1, 1, 2, 0, 2, 1, 1, 1, 0, 2, 1, 1, 0, 1, 1, 1,…</span></span>
+<span><span class="co">#&gt; $ country       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "I…</span></span></code></pre></div>
+<p>The function <code><a href="../reference/uss_get_matches.html">uss_get_matches()</a></code> offers a cleaner implementation, also gets match data for specified country:</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/uss_get_matches.html">uss_get_matches</a></span><span class="op">(</span><span class="st">"italy"</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Rows: 25,404</span></span>
 <span><span class="co">#&gt; Columns: 8</span></span>
 <span><span class="co">#&gt; $ tier          <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,…</span></span>
