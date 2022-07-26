@@ -17,7 +17,7 @@
 #' @noRd
 #'
 validate_data_frame <- function(.data, call = rlang::caller_env()) {
-  
+
   # https://cli.r-lib.org/reference/cli_abort.html
   # https://rlang.r-lib.org/reference/abort.html
   #
@@ -39,7 +39,7 @@ validate_data_frame <- function(.data, call = rlang::caller_env()) {
   #
   # potential to update tidyverse design giude:
   #  - https://design.tidyverse.org/err-constructor.html#error-hierarchies
-  
+
   # predicate
   if (!is.data.frame(.data)) {
     cli::cli_abort(
@@ -56,7 +56,7 @@ validate_data_frame <- function(.data, call = rlang::caller_env()) {
       call = call
     )
   }
-  
+
   invisible(.data)
 }
 
@@ -81,24 +81,31 @@ validate_data_frame <- function(.data, call = rlang::caller_env()) {
 #' @noRd
 #'
 validate_cols <- function(.data, cols_req, call = rlang::caller_env()) {
-  
+
   cols_data <- names(.data)
   cols_missing <- cols_req[!(cols_req %in% cols_data)]
-  
+
   # predicate
   if (length(cols_missing) > 0) {
-    
+
     # helper function to format quantities
     # - see https://cli.r-lib.org/articles/pluralization.html
     qlen <- function(x) cli::qty(length(x))
-    
+
     cli::cli_abort(
       # information for user
-      # class information for developers
+      c(
+        message = "Dataframe is missing columns."
+        , x = "Missing columns: {.vals {cols_missing}}"
+      )
+      , class = "ussie_error_cols" # class information for developers
+      , cols_req = cols_req
+      , cols_data = cols_data
       # other information for developers
       # tell user where we are calling from
+      , call = call
     )
   }
-  
+
   invisible(.data)
 }
