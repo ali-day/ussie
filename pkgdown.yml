@@ -3,7 +3,7 @@ pkgdown: 2.0.6
 pkgdown_sha: ~
 articles:
   ussie: ussie.html
-last_built: 2022-07-26T18:50Z
+last_built: 2022-07-26T18:54Z
 urls:
   reference: https://ali-day.github.io/ussie/reference
   article: https://ali-day.github.io/ussie/articles
