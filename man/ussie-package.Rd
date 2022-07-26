@@ -12,6 +12,7 @@ This is a toy package developed at rstudio::conf 2022's Building Tidy Tools work
 Useful links:
 \itemize{
   \item \url{https://github.com/ali-day/ussie}
+  \item \url{https://ali-day.github.io/ussie/}
   \item Report bugs at \url{https://github.com/ali-day/ussie/issues}
 }
 
