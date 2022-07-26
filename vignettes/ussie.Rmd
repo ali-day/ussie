@@ -34,3 +34,10 @@ The function `uss_get_matches()` offers a cleaner implementation, also gets matc
 uss_get_matches("italy") |> 
   glimpse()
 ```
+
+We can add filtering conditions:
+
+```{r uss_get_matches_filter}
+uss_get_matches("england", season == 1929) |> 
+  glimpse()
+```

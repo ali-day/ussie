@@ -16,4 +16,6 @@ test_that("is tibble", {
 
   expect_s3_class(italy_df$tier, "factor")
 
+  expect_snapshot(dplyr::glimpse(italy_df))
+
 })
